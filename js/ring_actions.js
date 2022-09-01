@@ -1,7 +1,6 @@
 import progressRing from './progressRing.js';
 
 const circle = new progressRing("progress_ring_circle");
-console.log(circle)
 
 const percent_input = document.querySelector('.value_block_percent');
 circle.set_progress(percent_input.value);
