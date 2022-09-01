@@ -36,9 +36,9 @@
 <div class="progress_block">
 
     <div class="progress_ring">
-        <svg class="progress_ring_svg" width="140" height="140">
-            <circle class="background_ring" r="60" stroke="#EEF3F6" stroke-width="10" cx="70" cy="70" fill="transparent"/>
-            <circle class="progress_ring_circle" r="60" stroke="#0B5DFF" stroke-width="10" cx="70" cy="70" fill="transparent"/>
+        <svg class="progress_ring_svg" width="120" height="120">
+            <circle class="background_ring" r="54" stroke="#EEF3F6" stroke-width="8" cx="60" cy="60" fill="transparent"/>
+            <circle class="progress_ring_circle" r="54" stroke="#0B5DFF" stroke-width="8" cx="60" cy="60" fill="transparent"/>
 
         </svg>
     </div>
@@ -46,25 +46,24 @@
     <div class="buttons">
 
         <div class="value_block">
-            <label>
-                <input type="number" class="value_block_percent" value="60">
-                Value
-            </label>
+
+            <input type="number" class="value_block_percent" id="value_block_percent" value="60">
+            <label for="value_block_percent">Value</label>
 
         </div>
 
         <div class="animation_block">
-            <label>
-                <input type="checkbox" class="animation_button switch_btn switch_on">
-                Animate
-            </label>
+
+            <input type="checkbox" class="animation_button" id="animation_button">
+            <label for="animation_button">Animate</label>
+
         </div>
 
-        <div class="hide_block switch">
-            <label>
-                <input type="checkbox" class="hide_button switch_btn">
-                Hide
-            </label>
+        <div class="hide_block">
+
+            <input type="checkbox" class="hide_button" id="hide_button">
+            <label for="hide_button">Hide</label>
+
         </div>
 
     </div>

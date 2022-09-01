@@ -1,7 +1,7 @@
 input.value_block_percent{
     display: inline-block;
-    width: 45px;
-    height: 30px;
+    width: 36px;
+    height: 24px;
     border-radius: 20px;
     border-color: black;
     border-width: 1px;
@@ -9,7 +9,7 @@ input.value_block_percent{
     text-align: center;
 
     font-family: "GT Eesti Pro Display", serif;
-    font-size: 18px;
+    font-size: 15px;
 
 }
 
