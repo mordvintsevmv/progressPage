@@ -7,6 +7,7 @@ input.value_block_percent{
     border-width: 1px;
     background: white;
     text-align: center;
+    transition: color 0.3s;
 
     font-family: "GT Eesti Pro Display", serif;
     font-size: 15px;

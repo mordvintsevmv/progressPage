@@ -59,8 +59,6 @@ label {
         margin: auto 0 auto 40px;
         float: right;
         overflow: hidden;
-
-
     }
 
     .progress_ring{
@@ -68,6 +66,5 @@ label {
         display: inline-block;
         float: left;
         overflow: hidden;
-
     }
 }
