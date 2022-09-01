@@ -1,7 +1,22 @@
 .progress_ring_circle{
-    transform: rotate(270deg);
+    transform: rotate(-90deg);
     transform-origin: center;
 
     transition: 0.3s;
 
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(-90deg);
+    }
+    100% {
+        transform:rotate(270deg);
+    }
 }

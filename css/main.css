@@ -29,10 +29,28 @@ html{
     font-family: 'GT Eesti Pro Display', serif;
     font-weight: normal;
     color: #000000;
+    width: 100%;
 
     background-color: #FFFFFF;
+
 }
 
 h3{
     font-weight: bold;
+}
+
+header{
+    margin-bottom: 75px;
+}
+
+.progress_ring{
+    margin-bottom: 100px;
+}
+
+.progress_block{
+    margin: auto;
+}
+
+.buttons div{
+    padding: 9px 0;
 }

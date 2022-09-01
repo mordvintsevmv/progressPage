@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width"/>
 
     <title>Progress Page</title>
     <link rel="icon" href="favicon.ico"/>
@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/progress_ring.css"/>
+    <link rel="stylesheet" href="css/switch_btn.css"/>
+    <link rel="stylesheet" href="css/value_block.css"/>
+
+
 
 
 </head>
@@ -29,35 +33,44 @@
     <h3>Progress</h3>
 </header>
 
-<div class="progress_ring">
-    <svg class="progress_ring_svg" width="120" height="120">
-        <circle class="progress_ring_circle" r="44" stroke="#0B5DFF" stroke-width="8" cx="60" cy="60" fill="transparent"/>
-    </svg>
+<div class="progress_block">
+
+    <div class="progress_ring">
+        <svg class="progress_ring_svg" width="140" height="140">
+            <circle class="background_ring" r="60" stroke="#EEF3F6" stroke-width="10" cx="70" cy="70" fill="transparent"/>
+            <circle class="progress_ring_circle" r="60" stroke="#0B5DFF" stroke-width="10" cx="70" cy="70" fill="transparent"/>
+
+        </svg>
+    </div>
+
+    <div class="buttons">
+
+        <div class="value_block">
+            <label>
+                <input type="number" class="value_block_percent" value="60">
+                Value
+            </label>
+
+        </div>
+
+        <div class="animation_block">
+            <label>
+                <input type="checkbox" class="animation_button switch_btn switch_on">
+                Animate
+            </label>
+        </div>
+
+        <div class="hide_block switch">
+            <label>
+                <input type="checkbox" class="hide_button switch_btn">
+                Hide
+            </label>
+        </div>
+
+    </div>
 </div>
-
-<div class="buttons">
-
-    <div class="value_block">
-        <label >
-            <input type="number" class="value_button_percent">
-            Value
-        </label>
-
-    </div>
-
-    <div class="animate_block">
-        <button type="button" class="animate_button"></button>
-        Animate
-    </div>
-
-    <div class="hide_block">
-        <button type="button" class="hide_button"></button>
-        Hide
-    </div>
-
-</div>
-
 </body>
 
 <script src="js/progress_ring.js"></script>
+
 </html>
