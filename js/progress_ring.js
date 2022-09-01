@@ -4,7 +4,7 @@ class progressRing{
         this.circle = document.querySelector(`.${class_name}`);
         this.radius = this.circle.r.baseVal.value;
         this.circle_length = 2 * Math.PI * this.radius;
-        this.progress = 100;
+        this.progress = 0;
     }
 
     print_radius(){
@@ -28,7 +28,7 @@ class progressRing{
             const empty = this.circle_length - fill;
 
             this.circle.style.strokeDasharray = `${fill} ${empty}`;
-            this.circle.style.opacity = "100";
+            this.circle.style.opacity = "1";
         }
 
     }
@@ -51,7 +51,7 @@ class progressRing{
 
     show(){
         if (this.progress !== 0) {
-            this.circle.style.opacity = "100";
+            this.circle.style.opacity = "1";
         }
     }
 
@@ -101,8 +101,8 @@ hide_button.addEventListener('click', function (){
         animation_button.checked = false;
         circle.animation_turnoff();
 
-        animation_button.opacity = "20";
-        percent_input.opacity = "20";
+        document.querySelector(".animation_block").style.opacity = "0.2";
+        document.querySelector(".value_block").style.opacity = "0.2";
 
         circle.hide();
 
@@ -110,8 +110,8 @@ hide_button.addEventListener('click', function (){
         animation_button.disabled = false;
         percent_input.disabled = false;
 
-        animation_button.opacity = "100";
-        percent_input.opacity = "100";
+        document.querySelector(".animation_block").style.opacity = "1";
+        document.querySelector(".value_block").style.opacity = "1";
 
         circle.show();
 
