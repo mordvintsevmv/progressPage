@@ -1,0 +1,7 @@
+.progress_ring_circle{
+    transform: rotate(270deg);
+    transform-origin: center;
+
+    transition: 0.3s;
+
+}

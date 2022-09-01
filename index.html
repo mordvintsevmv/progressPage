@@ -2,22 +2,24 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Progress Page</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico"/>
 
-    <meta property="og:title" content="Progress Page">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mordvintsevmv.github.io/progressPage/">
+    <meta property="og:title" content="Progress Page"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://mordvintsevmv.github.io/progressPage/"/>
     <meta
             property="og:description"
             content="Progress Page for Ozon FinTech"
-            >
-    <meta property="og:image" content="img/progress_og.png">
+    />
+    <meta property="og:image" content="img/progress_og.png"/>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/progress_ring.css"/>
+
 
 </head>
 
@@ -27,8 +29,35 @@
     <h3>Progress</h3>
 </header>
 
-<p>Active</p>
+<div class="progress_ring">
+    <svg class="progress_ring_svg" width="120" height="120">
+        <circle class="progress_ring_circle" r="44" stroke="#0B5DFF" stroke-width="8" cx="60" cy="60" fill="transparent"/>
+    </svg>
+</div>
+
+<div class="buttons">
+
+    <div class="value_block">
+        <label >
+            <input type="number" class="value_button_percent">
+            Value
+        </label>
+
+    </div>
+
+    <div class="animate_block">
+        <button type="button" class="animate_button"></button>
+        Animate
+    </div>
+
+    <div class="hide_block">
+        <button type="button" class="hide_button"></button>
+        Hide
+    </div>
+
+</div>
+
 </body>
 
-
+<script src="js/progress_ring.js"></script>
 </html>
