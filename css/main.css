@@ -9,50 +9,65 @@
     Круг - Синий: #0B5DFF
  */
 
-@font-face {
-    font-family: 'GT Eesti Pro Display';
-    src: local('GT Eesti Pro Display Bold'), local('GTEestiProDisplay-Bold'),
-    url('../fonts/GTEestiProDisplay-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GT Eesti Pro Display';
-    src: local('GT Eesti Pro Display Regular'), local('GTEestiProDisplay-Regular'),
-    url('../fonts/GTEestiProDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html{
     font-family: 'GT Eesti Pro Display', serif;
     font-weight: normal;
     color: #000000;
-
     background-color: #FFFFFF;
-
-
 }
 
 header{
     margin-bottom: 75px;
 }
 
-.progress_block{
-    width: 100%;
-}
-
-.progress_ring{
-    width: 120px;
-    margin: 0 auto 100px auto;
-}
-
 .buttons div{
-    width: 120px;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
 }
 
 label {
     padding-left: 15px;
+}
+
+.progress_block{
+    margin: 0 auto;
+}
+
+
+@media screen and (orientation: portrait) {
+    .progress_ring{
+        width: 125px;
+        margin: 0 auto;
+    }
+
+    .buttons{
+        width: 125px;
+        margin: 75px auto 0 auto;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+    .progress_block{
+        margin: 0 auto;
+        height: 125px;
+        width: 350px;
+
+    }
+
+    .buttons{
+        display: inline-block;
+        margin: auto 0 auto 40px;
+        float: right;
+        overflow: hidden;
+
+
+    }
+
+    .progress_ring{
+        margin: auto 40px auto 0;
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+
+    }
 }

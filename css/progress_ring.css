@@ -10,9 +10,6 @@
     animation-timing-function: linear;
     animation-play-state: paused;
 
-    width: 140px;
-    height: 140px;
-
 }
 
 @keyframes rotation {
