@@ -1,5 +1,6 @@
 input.value_block_percent{
     display: inline-block;
+    outline: none;
     width: 36px;
     height: 24px;
     border-radius: 20px;
@@ -11,7 +12,6 @@ input.value_block_percent{
 
     font-family: "GT Eesti Pro Display", serif;
     font-size: 15px;
-
 }
 
 input[type="number"] {

@@ -15,7 +15,7 @@
             property="og:description"
             content="Progress Page for Ozon FinTech"
     />
-    <meta property="og:image" content="img/progress_og.png"/>
+    <meta property="og:image" content="https://mordvintsevmv.github.io/progressPage/img/progress_og.png"/>
 
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/progress_ring.css"/>
@@ -33,41 +33,40 @@
 </header>
 <div class="main">
 
-<div class="progress_block">
+    <div class="progress_block">
 
-    <div class="progress_ring">
-        <svg class="progress_ring_svg" width="120" height="120">
-            <circle class="background_ring" r="54" stroke="#EEF3F6" stroke-width="8" cx="60" cy="60" fill="transparent"/>
-            <circle class="progress_ring_circle" r="54" stroke="#0B5DFF" stroke-width="8" cx="60" cy="60" fill="transparent"/>
+        <div class="progress_ring">
+            <svg class="progress_ring_svg" width="120" height="120">
+                <circle class="background_ring" r="54" stroke="#EEF3F6" stroke-width="8" cx="60" cy="60" fill="transparent"/>
+                <circle class="progress_ring_circle" r="54" stroke="#0B5DFF" stroke-width="8" cx="60" cy="60" fill="transparent"/>
+            </svg>
+        </div>
 
-        </svg>
+        <div class="buttons">
+
+            <div class="value_block">
+
+                <input type="number" class="value_block_percent" id="value_block_percent" value="60">
+                <label for="value_block_percent">Value</label>
+
+            </div>
+
+            <div class="animation_block">
+
+                <input type="checkbox" class="animation_button" id="animation_button">
+                <label for="animation_button">Animate</label>
+
+            </div>
+
+            <div class="hide_block">
+
+                <input type="checkbox" class="hide_button" id="hide_button">
+                <label for="hide_button">Hide</label>
+
+            </div>
+
+        </div>
     </div>
-
-    <div class="buttons">
-
-        <div class="value_block">
-
-            <input type="number" class="value_block_percent" id="value_block_percent" value="60">
-            <label for="value_block_percent">Value</label>
-
-        </div>
-
-        <div class="animation_block">
-
-            <input type="checkbox" class="animation_button" id="animation_button">
-            <label for="animation_button">Animate</label>
-
-        </div>
-
-        <div class="hide_block">
-
-            <input type="checkbox" class="hide_button" id="hide_button">
-            <label for="hide_button">Hide</label>
-
-        </div>
-
-    </div>
-</div>
 </div>
 </body>
 
