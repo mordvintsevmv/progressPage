@@ -41,10 +41,18 @@
 <body>
 
 <header>
+
     <h3>Progress</h3>
+
+    <div class="features">
+        + features
+    </div>
+
 </header>
 
 <div class="main">
+
+
 
     <div class="progress_block">
 
@@ -78,14 +86,23 @@
 
             </div>
 
-            <div class="color_block">
+            <!--
+                Ввод цвета.
+            -->
+
+            <div class="color_block" hidden>
 
                 <input type="text" class="color_block_value" id="color_block_value" value="0B5DFF" maxlength="6" minlength="6">
                 <label for="color_block_value">HEX Color</label>
 
             </div>
 
-            <div class="duration_block">
+
+            <!--
+                Ввод периода.
+            -->
+
+            <div class="duration_block" hidden>
 
                 <input type="text" class="duration_block_value" id="duration_block_value" value="3">
                 <label for="duration_block_value">Duration</label>

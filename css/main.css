@@ -29,6 +29,10 @@ label {
     margin: 0 auto;
 }
 
+.features{
+    cursor: pointer;
+}
+
 
 @media screen and (orientation: portrait) {
 
@@ -61,6 +65,7 @@ label {
     }
 
     .buttons{
+        width: 170px;
         display: inline-block;
         float: right;
     }

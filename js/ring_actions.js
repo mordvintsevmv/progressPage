@@ -129,3 +129,18 @@ hide_button.addEventListener('click', function (){
 
 
 
+
+const features_button = document.querySelector('.features');
+
+features_button.addEventListener('click', function (){
+    if (document.querySelector(".color_block").hidden){
+        document.querySelector(".color_block").hidden = false;
+        document.querySelector(".duration_block").hidden = false;
+        features_button.innerHTML = "- features";
+
+    } else{
+        document.querySelector(".color_block").hidden = true;
+        document.querySelector(".duration_block").hidden = true;
+        features_button.innerHTML = "+ features";
+    }
+})
