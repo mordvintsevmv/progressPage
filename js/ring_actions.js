@@ -139,10 +139,13 @@ features_button.addEventListener('click', function (){
         document.querySelector(".color_block").hidden = false;
         document.querySelector(".duration_block").hidden = false;
         features_button.innerHTML = "- features";
+        features_button.style.color = "#F91155";
 
     } else{
         document.querySelector(".color_block").hidden = true;
         document.querySelector(".duration_block").hidden = true;
         features_button.innerHTML = "+ features";
+        features_button.style.color = "#06CA99";
+
     }
 })
