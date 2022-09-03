@@ -13,7 +13,7 @@ input.value_block_percent, input.duration_block_value, input.color_block_value{
     padding: 0 0 0 0;
 
     font-family: "GT Eesti Pro Display", serif;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 input[type="number"], input[type="text"] {
