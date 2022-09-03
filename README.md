@@ -76,23 +76,21 @@ Animate и Hide – логические переключатели on / off, с
 
 ## <a name="test">Пример работы</a>
 
-IOS Safari:
+### IOS Safari:
 
-<img src="img/test/ios_safari_h.PNG" alt="alt" width="400"/>
+![alt](img/test/ios_safari_h.PNG)
 
-<img src="img/test/ios_safari_v.PNG" alt="alt" height="400"/>
+![alt](img/test/ios_safari_v.PNG)
 
-<img src="img/test/ios_safari_hide.PNG" alt="alt" height="400"/>
+![alt](img/test/ios_safari_hide.PNG)
 
+### MacOS Safari:
 
-MacOS Safari:
+![alt](img/test/macos_safari_v.png)
 
-<img src="img/test/macos_safari_v.png" alt="alt" height="400"/>
+![alt](img/test/macos_safari_h.png)
 
-<img src="img/test/macos_safari_h.png" alt="alt" width="400"/>
-
-<img src="img/test/macos_safari_hide.png" alt="alt" width="400"/>
-
+![alt](img/test/macos_safari_hide.png)
 
 
 [🔝К оглавлению🔝](#content)
