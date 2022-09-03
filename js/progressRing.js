@@ -15,6 +15,11 @@ export default class progressRing {
         this.circle_length = 2 * Math.PI * this.radius;
         this.progress = 0;
         this.circle.style.stroke = "#0B5DFF";
+        this.state = {
+            normal: true,
+            animated: false,
+            hidden: false
+        }
     }
 
 
@@ -106,30 +111,49 @@ export default class progressRing {
        Метод, включающий анимацию.
      */
     animation_turnon(){
-        this.circle.style.animationPlayState = `running`;
+        if (!this.state.animated) {
+            this.circle.style.animationPlayState = `running`;
+            this.state.animated = true;
+        }
     }
 
     /*
        Метод, выключающий анимацию.
      */
     animation_turnoff(){
-        this.circle.style.animationPlayState = `paused`;
+        if (this.state.animated) {
+            this.circle.style.animationPlayState = `paused`;
+            this.state.animated = false;
+        }
+
     }
 
     /*
        Метод, скрывающий кольцо прогресса.
      */
     hide(){
-        this.circle.style.opacity = "0";
+        if(this.state.normal) {
+            this.circle.style.opacity = "0";
+            this.state.hidden = true;
+            this.state.normal = false;
+            this.state.animated = false;
+        }
     }
 
     /*
        Метод, возвращающий видимость кольца прогресса.
      */
     show(){
-        if (this.progress > 0) {
-            this.circle.style.opacity = "1";
+        if(this.state.hidden) {
+            this.state.normal = true;
+            this.state.hidden = false;
+
+            if (this.progress > 0) {
+                this.circle.style.opacity = "1";
+            }
+
         }
+
     }
 
 }

@@ -65,11 +65,13 @@ if (animation_button.checked){
 }
 
 animation_button.addEventListener('click', function (){
+
     if (animation_button.checked){
         circle.animation_turnon();
     } else {
         circle.animation_turnoff();
     }
+
 })
 
 
@@ -124,6 +126,7 @@ hide_button.addEventListener('click', function (){
         circle.show();
 
     }
+
 })
 
 
@@ -148,4 +151,3 @@ features_button.addEventListener('click', function (){
 
     }
 })
-
