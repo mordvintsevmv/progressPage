@@ -1,7 +1,7 @@
 # Блок Progress
 Тестовое задание для Ozon FinTech
 
-<a href="https://mordvintsevmv.github.io/progressPage/">Проверить работу</a>
+<a href="https://mordvintsevmv.github.io/progressPage/" target="_blank">Проверить работу</a>
 
 ---
 
