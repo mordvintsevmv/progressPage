@@ -1,7 +1,7 @@
 export default class progressRing{
 
-    constructor(class_name) {
-        this.circle = document.querySelector(`.${class_name}`);
+    constructor(id) {
+        this.circle = document.querySelector(`#${id}`);
         this.radius = this.circle.r.baseVal.value;
         this.circle_length = 2 * Math.PI * this.radius;
         this.progress = 0;
