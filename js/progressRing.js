@@ -2,7 +2,7 @@
     Класс progressRing позволяет создать кольцо прогресса.
  */
 
-export default class progressRing{
+export default class progressRing {
 
     /*
         Конструктор принимает id тега <circle> и получает объект со страницы.
@@ -21,56 +21,60 @@ export default class progressRing{
     /*
         Методы, позволяющие получить основные данные объекта класса progressRing.
      */
-    print_radius(){
+    print_radius() {
         console.log(this.radius);
     }
 
-    print_circle_length(){
+    print_circle_length() {
         console.log(this.circle_length);
     }
 
-    print_progress(){
+    print_progress() {
         console.log(this.progress);
     }
 
-    print_color(){
+    print_color() {
         console.log(this.circle.style.stroke);
     }
 
     /*
         Метод для редактирования значения прогресса и изменения его отображения.
      */
-    set_progress(progress){
-        this.progress = progress;
+    set_progress(progress) {
+        if (!(/\D\./).test(progress)) {
+            this.progress = progress;
 
 
-        /*
-           Если прогресс находится в пределах 1-100 и более, задаётся необходимая длина отрезков.
-         */
-        if ((progress < 100) && (progress > 0)){
+            /*
+               Если прогресс находится в пределах 1-100 и более, задаётся необходимая длина отрезков.
+             */
+            if ((progress < 100) && (progress > 0)) {
 
-            const fill = (this.progress/100) * this.circle_length;
-            const empty = this.circle_length - fill;
+                const fill = (this.progress / 100) * this.circle_length;
+                const empty = this.circle_length - fill;
 
-            this.circle.style.strokeDasharray = `${fill} ${empty}`;
-            this.circle.style.opacity = "1";
+                this.circle.style.strokeDasharray = `${fill} ${empty}`;
+                this.circle.style.opacity = "1";
 
-        } else if (progress >= 100){
+            } else if (progress >= 100) {
 
-            this.circle.style.strokeDasharray = `${this.circle_length} 0`;
-            this.circle.style.opacity = "1";
+                this.circle.style.strokeDasharray = `${this.circle_length} 0`;
+                this.circle.style.opacity = "1";
+
+            }
+
+            /*
+               Если прогресс ниже нуля, то непрозрачность кольца становится равной нулю.
+               Такой подход позволяет избежать маленькую полоску прогресса (равную 1%), которая возникает из-за деления на ноль.
+             */
+            else if (progress <= 0) {
+
+                this.circle.style.opacity = "0";
+
+            }
 
         }
 
-        /*
-           Если прогресс ниже нуля, то непрозрачность кольца становится равной нулю.
-           Такой подход позволяет избежать маленькую полоску прогресса (равную 1%), которая возникает из-за деления на ноль.
-         */
-        else if (progress <= 0){
-
-            this.circle.style.opacity = "0";
-
-        }
 
     }
 
@@ -79,7 +83,7 @@ export default class progressRing{
        Выполнена проверка на правильность ввода числа.
      */
     set_rotate_duration(duration){
-        if ((/\d/) && (duration > 0)) {
+        if (!(/\D\./).test(duration) && (duration > 0)) {
             this.circle.style.animationDuration = `${duration}s`;
         }
     }
