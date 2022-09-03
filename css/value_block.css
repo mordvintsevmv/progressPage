@@ -1,4 +1,5 @@
 input.value_block_percent, input.duration_block_value, input.color_block_value{
+
     display: inline-block;
     outline: none;
     width: 60px;
@@ -8,7 +9,8 @@ input.value_block_percent, input.duration_block_value, input.color_block_value{
     border-width: 1px;
     background: white;
     text-align: center;
-    transition: color 0.3s;
+
+    padding: 0 0 0 0;
 
     font-family: "GT Eesti Pro Display", serif;
     font-size: 15px;
@@ -22,10 +24,5 @@ input[type="number"], input[type="text"] {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    display: none;
-}
-
-input[type="text"]::-webkit-outer-spin-button,
-input[type="text"]::-webkit-inner-spin-button {
     display: none;
 }

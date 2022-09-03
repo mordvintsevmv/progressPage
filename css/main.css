@@ -32,6 +32,7 @@ label {
 .features{
     cursor: pointer;
     color: #06CA99;
+    transition: color 0.3s ease-in-out;
 }
 
 
