@@ -1,7 +1,7 @@
-input.value_block_percent{
+input.value_block_percent, input.duration_block_value, input.color_block_value{
     display: inline-block;
     outline: none;
-    width: 36px;
+    width: 60px;
     height: 24px;
     border-radius: 20px;
     border-color: black;
@@ -14,7 +14,7 @@ input.value_block_percent{
     font-size: 15px;
 }
 
-input[type="number"] {
+input[type="number"], input[type="text"] {
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     appearance: textfield;
@@ -22,5 +22,10 @@ input[type="number"] {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
     display: none;
 }

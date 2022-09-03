@@ -17,10 +17,6 @@ html{
     background-color: #FFFFFF;
 }
 
-header{
-    margin-bottom: 75px;
-}
-
 .buttons div{
     margin: 0 auto 10px auto;
 }
@@ -35,37 +31,42 @@ label {
 
 
 @media screen and (orientation: portrait) {
+
+    header{
+        margin-bottom: 75px;
+    }
+
     .progress_ring{
         width: 125px;
         margin: 0 auto;
     }
 
     .buttons{
-        width: 125px;
+        width: 165px;
         margin: 75px auto 0 auto;
+
     }
 }
 
 @media screen and (orientation: landscape) {
 
+    header{
+        margin-bottom: 45px;
+    }
+
     .progress_block{
         margin: 0 auto;
-        height: 125px;
+        height: 200px;
         width: 350px;
-
     }
 
     .buttons{
         display: inline-block;
-        margin: auto 0 auto 40px;
         float: right;
-        overflow: hidden;
     }
 
     .progress_ring{
-        margin: auto 40px auto 0;
         display: inline-block;
         float: left;
-        overflow: hidden;
     }
 }

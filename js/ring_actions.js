@@ -21,6 +21,39 @@ percent_input.addEventListener('keyup', function (){
 })
 
 
+
+/*
+   Получаем input со значением прогресса.
+   Задаём начальное значение прогресса кольцу.
+   Добавляем обработчик событий на изменение значения для моментольного отображения нового прогресса.
+ */
+const color_input = document.querySelector('.color_block_value');
+
+circle.set_color(color_input.value);
+
+color_input.addEventListener('keyup', function (){
+    if (color_input.value.length === 6){
+        circle.set_color(color_input.value);
+    }
+})
+
+
+
+/*
+   Получаем input со значением прогресса.
+   Задаём начальное значение прогресса кольцу.
+   Добавляем обработчик событий на изменение значения для моментольного отображения нового прогресса.
+ */
+
+const duration_input = document.querySelector('.duration_block_value');
+
+duration_input.addEventListener('keyup', function (){
+    circle.set_rotate_duration(duration_input.value);
+})
+
+
+
+
 /*
    Получаем input (checkbox) с состоянием анимации.
    Включаем анимацю сразу, если checkbox отмечен.
@@ -62,25 +95,37 @@ hide_button.addEventListener('click', function (){
     if (hide_button.checked){
         animation_button.disabled = true;
         percent_input.disabled = true;
+        duration_input.disabled = true;
+        color_input.disabled = true;
 
         animation_button.checked = false;
         circle.animation_turnoff();
 
         document.querySelector(".animation_block").style.opacity = "0.2";
         document.querySelector(".value_block").style.opacity = "0.2";
+        document.querySelector(".color_block").style.opacity = "0.2";
+        document.querySelector(".duration_block").style.opacity = "0.2";
+
 
         circle.hide();
 
     } else {
         animation_button.disabled = false;
         percent_input.disabled = false;
+        duration_input.disabled = false;
+        color_input.disabled = false;
+
 
         document.querySelector(".animation_block").style.opacity = "1";
         document.querySelector(".value_block").style.opacity = "1";
+        document.querySelector(".color_block").style.opacity = "1";
+        document.querySelector(".duration_block").style.opacity = "1";
+
 
         circle.show();
 
     }
 })
+
 
 
