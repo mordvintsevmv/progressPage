@@ -43,9 +43,16 @@
 <header>
     <h3>Progress</h3>
 </header>
+
 <div class="main">
 
     <div class="progress_block">
+
+        <!--
+             Создаём два кольца:
+             Фоновое кольцо серого цвета.
+             Кольцо прогресса, которое изменяется в зависимости от действий пользователя.
+        -->
 
         <div class="progress_ring">
             <svg class="progress_ring_svg" width="120" height="120">
@@ -54,7 +61,15 @@
             </svg>
         </div>
 
+        <!--
+             Добавляем необходимые кнопки и поля.
+        -->
+
         <div class="buttons">
+
+            <!--
+                Ввод процентов.
+            -->
 
             <div class="value_block">
 
@@ -63,12 +78,20 @@
 
             </div>
 
+            <!--
+                Вкл/Выкл анимации.
+            -->
+
             <div class="animation_block">
 
                 <input type="checkbox" class="animation_button" id="animation_button">
                 <label for="animation_button">Animate</label>
 
             </div>
+
+            <!--
+                Вкл/Выкл отображения кольца прогресса.
+            -->
 
             <div class="hide_block">
 
@@ -81,6 +104,10 @@
     </div>
 </div>
 </body>
+
+<!--
+    Подключаем скрипты:
+-->
 
 <script type="module" src="js/progressRing.js"></script>
 <script type="module" src="js/ring_actions.js"></script>
