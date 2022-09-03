@@ -132,6 +132,11 @@ Animate и Hide – логические переключатели on / off, с
 
 ![alt](img/test/macos_safari_hide.png)
 
+Также работа проверена на:
+- iOS Chrome
+- iOS Opera
+- iOS Яндекс
+- MacOS Chrome
 
 [🔝К оглавлению🔝](#content)
 
