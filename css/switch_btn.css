@@ -2,7 +2,7 @@ input[type="checkbox"]{
     appearance:none;
     width:60px;
     height:24px;
-    border-radius: 20px;
+    border-radius: 12px;
     background: #DEE6EF;
     position:relative;
     display:inline-block;
@@ -19,7 +19,7 @@ input[type="checkbox"]:after{
     width:20px;
     height:20px;
     background:white;
-    border-radius:13px;
+    border-radius:10px;
     transition: left 0.1s linear;
 }
 
@@ -30,6 +30,3 @@ input[type="checkbox"]:checked{
 input[type="checkbox"]:checked:after{
     left:38px;
 }
-
-
-
