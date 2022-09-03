@@ -128,7 +128,9 @@ hide_button.addEventListener('click', function (){
 })
 
 
-
+/*
+   Кнопка для добавления/скрытия функций.
+ */
 
 const features_button = document.querySelector('.features');
 
