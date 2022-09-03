@@ -46,6 +46,10 @@ export default class progressRing {
         console.log(this.circle.style.animationDuration);
     }
 
+    print_states() {
+        console.log(this.state);
+    }
+
     /*
         Метод для редактирования значения прогресса и изменения его отображения.
      */
