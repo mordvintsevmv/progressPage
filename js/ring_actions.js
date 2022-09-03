@@ -6,7 +6,6 @@ import progressRing from './progressRing.js';
 const circle = new progressRing("progress_ring_circle_1");
 
 
-
 /*
    Получаем input со значением прогресса.
    Задаём начальное значение прогресса кольцу.
@@ -149,3 +148,4 @@ features_button.addEventListener('click', function (){
 
     }
 })
+
