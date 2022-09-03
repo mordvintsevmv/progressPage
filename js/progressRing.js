@@ -50,41 +50,42 @@ export default class progressRing {
         Метод для редактирования значения прогресса и изменения его отображения.
      */
     set_progress(progress) {
-        if (!(/\D\./).test(progress)) {
-            this.progress = progress;
+        if (this.state.normal) {
+            if (!(/\D\./).test(progress)) {
+                this.progress = progress;
 
 
-            /*
-               Если прогресс находится в пределах 1-100 и более, задаётся необходимая длина отрезков.
-             */
-            if ((progress < 100) && (progress > 0)) {
+                /*
+                   Если прогресс находится в пределах 1-100 и более, задаётся необходимая длина отрезков.
+                 */
+                if ((progress < 100) && (progress > 0)) {
 
-                const fill = (this.progress / 100) * this.circle_length;
-                const empty = this.circle_length - fill;
+                    const fill = (this.progress / 100) * this.circle_length;
+                    const empty = this.circle_length - fill;
 
-                this.circle.style.strokeDasharray = `${fill} ${empty}`;
-                this.circle.style.opacity = "1";
+                    this.circle.style.strokeDasharray = `${fill} ${empty}`;
+                    this.circle.style.opacity = "1";
 
-            } else if (progress >= 100) {
+                } else if (progress >= 100) {
 
-                this.circle.style.strokeDasharray = `${this.circle_length} 0`;
-                this.circle.style.opacity = "1";
+                    this.circle.style.strokeDasharray = `${this.circle_length} 0`;
+                    this.circle.style.opacity = "1";
 
-            }
+                }
 
-            /*
-               Если прогресс ниже нуля, то непрозрачность кольца становится равной нулю.
-               Такой подход позволяет избежать маленькую полоску прогресса (равную 1%), которая возникает из-за деления на ноль.
-             */
-            else if (progress <= 0) {
+                /*
+                   Если прогресс ниже нуля, то непрозрачность кольца становится равной нулю.
+                   Такой подход позволяет избежать маленькую полоску прогресса (равную 1%), которая возникает из-за деления на ноль.
+                 */
+                else if (progress <= 0) {
 
-                this.circle.style.opacity = "0";
+                    this.circle.style.opacity = "0";
+
+                }
 
             }
 
         }
-
-
     }
 
     /*
@@ -92,8 +93,10 @@ export default class progressRing {
        Выполнена проверка на правильность ввода числа.
      */
     set_rotate_duration(duration){
-        if (!(/\D\./).test(duration) && (duration > 0)) {
-            this.circle.style.animationDuration = `${duration}s`;
+        if (this.state.normal) {
+            if (!(/\D\./).test(duration) && (duration > 0)) {
+                this.circle.style.animationDuration = `${duration}s`;
+            }
         }
     }
 
@@ -102,8 +105,10 @@ export default class progressRing {
        Выполнена проверка на ввод корректного формата.
      */
     set_color(color){
-        if ((!(/[^\da-fA-F]/).test(color)) && (color.length === 6)) {
-            this.circle.style.stroke = `#${color}`;
+        if (this.state.normal) {
+            if ((!(/[^\da-fA-F]/).test(color)) && (color.length === 6)) {
+                this.circle.style.stroke = `#${color}`;
+            }
         }
     }
 
