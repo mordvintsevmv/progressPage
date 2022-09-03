@@ -5,13 +5,7 @@ const circle = new progressRing("progress_ring_circle_1");
 const percent_input = document.querySelector('.value_block_percent');
 circle.set_progress(percent_input.value);
 percent_input.addEventListener('keyup', function (){
-    if ((percent_input.value < 100) && (percent_input.value > 0)){
-        circle.set_progress(percent_input.value);
-    } else if (percent_input.value >= 100){
-        circle.set_progress(100);
-    } else if (percent_input.value <= 0){
-        circle.set_progress(0);
-    }
+    circle.set_progress(percent_input.value);
 })
 
 const animation_button = document.querySelector('.animation_button');
